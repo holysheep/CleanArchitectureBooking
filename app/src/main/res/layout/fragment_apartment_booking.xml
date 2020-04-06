@@ -1,0 +1,182 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <TextView
+        android:id="@+id/topText"
+        android:layout_width="314dp"
+        android:layout_height="94dp"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentTop="true"
+        android:layout_marginTop="88dp"
+        android:gravity="center"
+        android:text="@string/start_screen_text_title"
+        android:textSize="36sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.494"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <androidx.appcompat.widget.LinearLayoutCompat
+        android:id="@+id/containerLocation"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true"
+        android:layout_marginStart="36dp"
+        android:layout_marginTop="56dp"
+        android:layout_marginEnd="36dp"
+        android:background="@drawable/field_bg"
+        android:orientation="horizontal"
+        app:cornerRadius="8dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/topText">
+
+        <androidx.appcompat.widget.AppCompatImageView
+            android:id="@+id/marker"
+            android:layout_width="15dp"
+            android:layout_height="18dp"
+            android:layout_alignParentTop="true"
+            android:layout_alignParentBottom="true"
+            android:layout_gravity="center"
+            android:layout_marginStart="16dp"
+            android:gravity="center_horizontal|center_vertical"
+            android:src="@drawable/marker" />
+
+        <TextView
+            android:id="@+id/addressTitle"
+            android:layout_width="match_parent"
+            android:layout_height="22dp"
+            android:layout_alignParentTop="true"
+            android:layout_marginStart="14dp"
+            android:layout_marginTop="14dp"
+            android:layout_marginEnd="14dp"
+            android:background="@drawable/field_bg"
+            android:ellipsize="end"
+            android:gravity="center_vertical"
+            android:textSize="16sp" />
+    </androidx.appcompat.widget.LinearLayoutCompat>
+
+    <TextView
+        android:id="@+id/hint"
+        android:layout_width="wrap_content"
+        android:layout_height="22dp"
+        android:layout_alignParentTop="true"
+        android:layout_marginTop="8dp"
+        android:gravity="center_vertical"
+        android:text="@string/start_screen_text_hint"
+        android:textColor="#999999"
+        android:textSize="12sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/containerLocation" />
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/datePicker"
+        android:layout_width="0dp"
+        android:layout_height="50dp"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true"
+        android:layout_marginStart="36dp"
+        android:layout_marginTop="24dp"
+        android:background="@drawable/field_bg"
+        android:gravity="center_vertical"
+        android:paddingStart="16dp"
+        android:paddingEnd="16dp"
+        android:text="@string/start_screen_text_hint_date"
+        android:textSize="16sp"
+        app:cornerRadius="8dp"
+        app:hintTextColor="#999999"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/hint"
+        app:layout_constraintWidth_percent="0.4" />
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/bedPicker"
+        android:layout_width="0dp"
+        android:layout_height="50dp"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true"
+        android:layout_marginTop="24dp"
+        android:background="@drawable/field_bg"
+        android:hint="@string/start_screen_text_hint_beds"
+        android:visibility="gone"
+        app:hintTextColor="#999999"
+        app:layout_constraintEnd_toEndOf="@id/containerLocation"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintTop_toBottomOf="@+id/hint"
+        app:layout_constraintWidth_percent="0.3" />
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/applyButton"
+        android:layout_width="294dp"
+        android:layout_height="60dp"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true"
+        android:layout_marginTop="72dp"
+        android:background="@drawable/gradient"
+        android:elevation="40dp"
+        android:text="@string/start_screen_text_button"
+        android:textAllCaps="false"
+        android:textColor="#ffffff"
+        android:textSize="22sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.495"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/datePicker" />
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/increase"
+        android:layout_width="0dp"
+        android:layout_height="48dp"
+        android:layout_marginTop="24dp"
+        android:text="@string/start_screen_text_counter_plus"
+        android:textSize="20sp"
+        app:layout_constraintEnd_toEndOf="@+id/containerLocation"
+        app:layout_constraintTop_toBottomOf="@+id/hint"
+        app:layout_constraintWidth_percent="0.1" />
+
+    <TextView
+        android:id="@+id/count"
+        android:layout_width="0dp"
+        android:layout_height="48dp"
+        android:layout_marginTop="24dp"
+        android:gravity="center_vertical|center_horizontal"
+        android:textAllCaps="true"
+        android:textSize="22sp"
+        app:layout_constraintEnd_toStartOf="@+id/decrease"
+        app:layout_constraintStart_toEndOf="@+id/increase"
+        app:layout_constraintTop_toBottomOf="@+id/hint"
+        app:layout_constraintWidth_percent="0.1"
+        tools:text="1" />
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/decrease"
+        android:layout_width="0dp"
+        android:layout_height="48dp"
+        android:layout_marginTop="24dp"
+        android:text="@string/start_screen_text_counter_minus"
+        android:textSize="20sp"
+        app:layout_constraintRight_toLeftOf="@+id/count"
+        app:layout_constraintTop_toBottomOf="@+id/hint"
+        app:layout_constraintWidth_percent="0.1" />
+
+    <TextView
+        android:id="@+id/hintBeds"
+        android:layout_width="wrap_content"
+        android:layout_height="22dp"
+        android:layout_alignParentTop="true"
+        android:layout_marginTop="12dp"
+        android:gravity="center_vertical"
+        android:text="Beds"
+        android:textColor="#999999"
+        android:textSize="12sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.779"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/count" />
+</androidx.constraintlayout.widget.ConstraintLayout>

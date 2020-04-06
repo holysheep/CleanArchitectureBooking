@@ -1,0 +1,11 @@
+<resources>
+    <string name="app_name">Airmee Apartments</string>
+    <string name="start_screen_text_title">Choose a date to book apartment</string>
+    <string name="start_screen_text_hint">Click on the field above to determine current location</string>
+    <string name="start_screen_text_hint_date">Pick date</string>
+    <string name="start_screen_text_hint_beds">Beds</string>
+    <string name="start_screen_text_button">Search apartments</string>
+    <string name="start_screen_text_counter_plus">+</string>
+    <string name="start_screen_text_counter_minus">-</string>
+    <string name="list_screen_text_empty_list">No available apartments for this date</string>
+</resources>

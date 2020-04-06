@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/nav_graph"
+    app:startDestination="@id/apartmentBookingFragment">
+
+    <fragment
+        android:id="@+id/apartmentBookingFragment"
+        android:name="com.airmee.apartments.ui.presenters.ApartmentBookingFragment"
+        android:label="fragment_apartment_booking"
+        tools:layout="@layout/fragment_apartment_booking">
+        <action
+            android:id="@+id/applyFilteringAndSearch"
+            app:destination="@id/apartmentListFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/apartmentListFragment"
+        android:name="com.airmee.apartments.ui.presenters.ApartmentListFragment"
+        android:label="fragment_apartment_list"
+        tools:layout="@layout/fragment_apartment_list">
+        <argument
+            android:name="bedroomCount"
+            app:argType="integer" />
+        <argument
+            android:name="latitude"
+            app:argType="string" />
+        <argument
+            android:name="longitude"
+            app:argType="string" />
+    </fragment>
+</navigation>
