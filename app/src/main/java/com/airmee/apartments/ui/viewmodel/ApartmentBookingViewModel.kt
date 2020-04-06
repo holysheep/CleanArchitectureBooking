@@ -50,6 +50,8 @@ class ApartmentBookingViewModel(private val userLocationUseCase: GetUserLocation
                     it?.let { it1 -> userLocationUseCase.getLocationTextAddress(it1) }
                         ?: run {
                             "Can't find your location"
+                        }.also {
+                            userLocationUseCase.getCurrentLocation()
                         }
             }
         }
