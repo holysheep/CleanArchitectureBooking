@@ -1,6 +1,6 @@
 # clean-architecture-booking
 
-Simple showcase up
+Simple showcase app for showing list from json with search opportunities. 
 
 ## Functionality:
 
@@ -22,4 +22,5 @@ in the available apartments.
 * Dependency Injection - Kodein
 * Reactive UI
 * Gradle Kotlin DSL
+
 
